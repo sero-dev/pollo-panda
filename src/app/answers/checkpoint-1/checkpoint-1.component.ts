@@ -6,7 +6,12 @@ import { Component, input, output } from '@angular/core';
   imports: [TitleCasePipe],
   template: `
     <p>{{ recipe().name }} ({{ recipe().type | titlecase }})</p>
-    <p>{{ recipe().description }}</p>
+
+    @if (recipe().description === '') {
+      <p>No description provided</p>
+    } @else {
+      <p>{{ recipe().description }}</p>
+    }
 
     <button (click)="choose.emit(recipe().id)">Choose</button>
   `,

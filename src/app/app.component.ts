@@ -4,9 +4,13 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css',
+  template: `
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  `,
+  styles: ``,
 })
-export class App {
+export class AppComponent {
   protected readonly title = signal('pollo-panda');
 }

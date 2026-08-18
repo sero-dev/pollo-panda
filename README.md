@@ -1,59 +1,32 @@
-# PolloPanda
+# Learn Essential Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.4.
+## Reading Material 1
+1. Basic Component Guide https://angular.dev/guide/components
+1. Inputs https://angular.dev/guide/components/inputs
+1. Outputs https://angular.dev/guide/components/outputs
+1. HTML Binding https://angular.dev/guide/templates/binding
+1. Event Handling https://angular.dev/guide/templates/event-listeners
+1. Control flow https://angular.dev/guide/templates/control-flow
 
-## Development server
+## Checkpoint 1
+Requirement: Create a recipe card that takes in a `Recipe` in the format listed below. If Description is empty, show "Description not available". Recipe Type should be uppercase. There should be a "Choose" button at the bottom that will output the ID when the user clicks on it. Update AppComponent to display the component.
 
-To start a local development server, run:
+```
+Recipe Name (Recipe Type)
+Recipe Description 
 
-```bash
-ng serve
+Choose Button
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+Use the following model for input. If the type property looks weird, here is a resource. String literal (https://www.w3schools.com/typescript/typescript_literal_types.php)
+```ts
+export interface Recipe {
+  id: number;
+  name: string;
+  type: 'salad' | 'soup' | 'drink'
+  description: string;
+}
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
